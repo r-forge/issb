@@ -1,6 +1,6 @@
 \name{diffusion}
 \alias{diffusion}
-\title{Runs the Euler-Maruyama}
+\title{Runs the Euler-Maruyama approximation}
 \usage{
   diffusion(model, maxtime, ddt)
 }
@@ -14,11 +14,11 @@
   \item{maxtime}{the maximum simulation time}
 }
 \value{
-  A matix. The first column contains the simulation time,
+  A matrix. The first column contains the simulation time,
   the other columns contain the species levels
 }
 \description{
-  Runs the Euler-Maruyama
+  Runs the Euler-Maruyama approximation
 }
 \examples{
 demo(lv)

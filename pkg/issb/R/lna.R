@@ -34,7 +34,7 @@ lnastep = function(model, z, m, ddt)
 #' linear noise approximation. A value of TRUE runs the algorithm of Fearnhead, Giagos, and
 #' Sherlock, 2012.
 #' @author Colin Gillespie
-#' @return  A matix. The first column contains the simulation time, the other columns contain the species 
+#' @return  A matrix. The first column contains the simulation time, the other columns contain the species 
 #' levels
 #' @keywords character
 #' @export
@@ -58,6 +58,8 @@ lna = function(model, maxtime, ddt, restart=FALSE)
                 
         #Reflecting barrier
         xmat[i,] = MASS:::mvrnorm(1, z + lsol[["m"]], lsol[["V"]])
+        
+        
         neg = xmat[i,] < 0
         xmat[i,][neg] = xmat[i-1,][neg]
         
